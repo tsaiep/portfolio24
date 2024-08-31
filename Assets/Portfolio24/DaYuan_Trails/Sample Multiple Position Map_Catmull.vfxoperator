@@ -324,8 +324,8 @@ MonoBehaviour:
     position:
       serializedVersion: 2
       x: -1049
-      y: 451
-      width: 1433
+      y: 449
+      width: 1451
       height: 318
     contents:
     - model: {fileID: 318}
@@ -9560,7 +9560,7 @@ MonoBehaviour:
   m_UIIgnoredErrors: []
   m_Parent: {fileID: 2}
   m_Children: []
-  m_UIPosition: {x: -463, y: 639}
+  m_UIPosition: {x: -464, y: 636}
   m_UICollapsed: 0
   m_UISuperCollapsed: 1
   m_InputSlots:
