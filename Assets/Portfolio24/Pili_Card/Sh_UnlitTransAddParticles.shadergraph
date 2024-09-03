@@ -536,18 +536,6 @@
 
 {
     "m_SGVersion": 0,
-    "m_Type": "UnityEditor.Rendering.HighDefinition.ShaderGraph.HDLitData",
-    "m_ObjectId": "3e0978abe8a04014b1f0eb1c0cf7e283",
-    "m_RayTracing": false,
-    "m_MaterialType": 0,
-    "m_RefractionModel": 0,
-    "m_SSSTransmission": true,
-    "m_EnergyConservingSpecular": true,
-    "m_ClearCoat": false
-}
-
-{
-    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.BlockNode",
     "m_ObjectId": "46f330e8e55e4155aecf31e0c6e6aa45",
     "m_Group": {
@@ -930,9 +918,6 @@
         },
         {
             "m_Id": "717360ef757b44a49703fca596ae4ad4"
-        },
-        {
-            "m_Id": "3e0978abe8a04014b1f0eb1c0cf7e283"
         },
         {
             "m_Id": "e674fd98610b4d23835b33abfdada4b6"
