@@ -247,7 +247,7 @@ MonoBehaviour:
   mesh: {fileID: -5607563773542050908, guid: 21156fb051a2eef4490ce33a02c5b9e1, type: 3}
   material: {fileID: 2100000, guid: 2b6da8f397b12114f98b903804b14ed9, type: 2}
   spawnCount: 512
-  spawnRadius: 50
+  spawnRadius: 5
 --- !u!4 &867806659
 Transform:
   m_ObjectHideFlags: 0
