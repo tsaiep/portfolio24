@@ -30,6 +30,7 @@ public class InstancedMeshSpawner : MonoBehaviour
     /// </summary>
     void Start()
     {
+        
         // 檢查必要的資源是否已設置
         if (mesh == null)
         {
@@ -52,10 +53,11 @@ public class InstancedMeshSpawner : MonoBehaviour
         for (int i = 0; i < spawnCount; i++)
         {
             Vector3 position = new Vector3(0,0,0);
-            Quaternion rotation = new Quaternion(0,0,0,0);
+            Quaternion rotation = Quaternion.identity;
             Vector3 scale =new Vector3(1,1,1);
             matrices.Add(Matrix4x4.TRS(position, rotation, scale));
         }
+        
 
         // 初始化材質屬性塊（可選）
         propertyBlock = new MaterialPropertyBlock();
@@ -88,14 +90,14 @@ public class InstancedMeshSpawner : MonoBehaviour
         for (int i = 0; i < totalBatches; i++)
         {
             // 計算當前批次的實例數量
-            int count = Mathf.Min(batchSize, spawnCount - i * batchSize);
+            int _count = Mathf.Min(batchSize, spawnCount - i * batchSize);
 
             // 創建當前批次的矩陣數組
-            Matrix4x4[] batchMatrices = new Matrix4x4[count];
-            matrices.CopyTo(i * batchSize, batchMatrices, 0, count);
+            Matrix4x4[] batchMatrices = new Matrix4x4[_count];
+            matrices.CopyTo(i * batchSize, batchMatrices, 0, _count);
 
             // 渲染當前批次的實例
-            Graphics.DrawMeshInstanced(mesh, 0, material, batchMatrices, count, propertyBlock);
+            Graphics.DrawMeshInstanced(mesh, 0, material, batchMatrices, _count, propertyBlock);
         }
     }
 }

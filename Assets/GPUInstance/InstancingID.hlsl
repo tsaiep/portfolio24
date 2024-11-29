@@ -62,7 +62,6 @@ inline void SetUnityMatrices(inout float4x4 objectToWorld, inout float4x4 worldT
         worldToObject._12_22_32_42 = float4(w2oRotation._12_22_32, 0.0f);
         worldToObject._13_23_33_43 = float4(w2oRotation._13_23_33, 0.0f);
         worldToObject._14_24_34_44 = float4(w2oPosition, 1.0f);
-        _InstanceColor = _EmitStrength * drawData.Color;
     #endif
 }
 
@@ -89,14 +88,6 @@ void GetInstanceID_float(out float Out)
         #if  UNITY_ANY_INSTANCING_ENABLED
             Out = unity_InstanceID;
         #endif
-    #endif
-}
-
-void InstancingColor_float(in float emit, out float3 Out)
-{
-    Out = 0;
-    #if  UNITY_ANY_INSTANCING_ENABLED
-        Out = emit * _PerInstanceData[unity_InstanceID].Color;
     #endif
 }
 
