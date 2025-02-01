@@ -40,7 +40,7 @@ public class StopMotionClipMaker : EditorWindow
         {
             originalClips.RemoveAt(removeIndex);
         }
-        if (GUILayout.Button("Add Target Material"))
+        if (GUILayout.Button("Add Clips"))
         {
             originalClips.Add(null);
         }
